@@ -1,6 +1,6 @@
 /* GET homepage */
 const index = (req, res) => {
-	res.render('index', { title: 'Travlr Gataways' });
+	res.render('main', { title: 'Travlr Gataways' });
 };
 
 module.exports = {
