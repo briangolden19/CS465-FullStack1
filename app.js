@@ -15,6 +15,7 @@ const mealsRouter = require('./app_server/routes/meals');
 const newsRouter = require('./app_server/routes/news');
 const roomsRouter = require('./app_server/routes/rooms');
 const apiRouter = require('./app_api/routes/index');
+const { handlebars } = require('hbs');
 
 const app = express();
 // view engine setup
@@ -22,6 +23,11 @@ app.set('views', path.join(__dirname,'app_server', 'views'));
 // register handlebars partials (https://www.npmjs.com/package/hbs)
 hbs.registerPartials(path.join(__dirname, 'app_server',
 'views/partials'));app.set('view engine', 'hbs');
+
+hbs.registerHelper('ifEquals', function (a, b, options) {
+  if (a == b) { return options.fn(this); }
+  return options.inverse(this);
+});
 
 app.use(logger('dev'));
 app.use(express.json());
