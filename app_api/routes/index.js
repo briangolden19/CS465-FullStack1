@@ -12,13 +12,9 @@ const tripsController = require('../controllers/trips');
 const roomsController = require('../controllers/rooms');
 const mealsController = require('../controllers/meals');
 
-router 
-    .route('/login')
-    .post(authController.login);
+router.route("/login").post(authController.login);
 
-router
-    .route('/register')
-    .post(authController.register);
+router.route("/register").post(authController.register);
 
 router
     .route('/trips')
