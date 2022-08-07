@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-12 col-md-8">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+      <div class="form-group">
+        <label>Email Address:</label>
+        <input
+          type="email"
+          formControlName="email"
+          id="email"
+          placeholder="Enter email here"
+          class="form-control"
+          [ngModel]="creds.email"
+        />
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input
+          type="password"
+          formControlName="password"
+          id="password"
+          placeholder="e.g 12+ alphanumerics"
+          class="form-control"
+          [ngModel]="creds.password"
+        />
+      </div>
+    </form>
+  </div>
+ </div>

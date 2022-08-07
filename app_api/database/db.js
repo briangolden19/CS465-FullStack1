@@ -73,3 +73,4 @@ connect();
 require("./models/travlr");
 require("./models/rooms");
 require("./models/meals");
+require("./models/user");
