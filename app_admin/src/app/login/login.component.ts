@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
 
   private doLogin(): void {
     this.authenticationService.login(this.creds)
-      .then(() => this.router.navigateByUrl('#'))
+      .then(() => this.router.navigateByUrl('list-trips'))
       .catch((message) => this.formError = message);
   }
 }
